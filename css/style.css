@@ -74,7 +74,7 @@ img {
 .header {
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 10;
   width: 100%;
   background-color: #fff;
   box-shadow: 0 5px 10px -6px rgba(0,0,0,.1);
@@ -158,15 +158,41 @@ img {
  メインビジュアル
 ---------------------------------*/
 .mv {
+  
   display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 85vh;
-  text-align: center;
+  align-items: flex-start;
+  padding-top: 440px;
+  /* justify-content: center; */
+  /*   height: 85vh; */
+  /*   text-align: center; */
+  position: relative;
+  height: 85vh;                /* ← 60〜70vhで調整 */
+  min-height: 420px;
+  background-image: url("../img/top_img.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
+.mv-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+      to bottom,
+      rgba(247, 247, 247, 0.0) 0%,    /* 上：写真そのまま */
+      rgba(247, 247, 247, 0.6) 85%,   /* かなり白 */
+      rgba(257, 247, 247, 1.0) 100%  
+  );
+} 
+
 .mv-container {
+  /* padding: 0 40px; */
+  position: relative;          /* overlay の上に出す */
+  z-index: 1;
+
+  max-width: 1100px;
   padding: 0 40px;
+  text-align: left;
 }
 
 .mv-title {
@@ -187,6 +213,63 @@ img {
 .mv-text {
   font-size: 16px;
   line-height: 1.8;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: #666;
+  z-index: 5;
+
+  opacity: 1;
+  transition: opacity 0.4s ease;
+  cursor: pointer;
+}
+
+.scroll-indicator span {
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.scroll-indicator::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 24px;
+  margin: 0 auto;
+  background-color: #999;
+
+  animation: scrollLine 1.6s ease-in-out infinite;
+}
+
+@media screen and (max-width: 768px) {
+  .mv {
+    height: 72vh;          /* ちょい短めに */
+    min-height: 520px;     /* 文字が詰まるなら増やす */
+    align-items: flex-start;
+    padding-top: 310px;    /* ヘッダー分の逃げ */
+    background-position: 57%; /* 画像の位置をbackground-position: X Y;で調整*/
+  }
+
+  .mv-container {
+    padding: 0 20px;
+    text-align: left;      /* 中央にしたければ center */
+  }
+
+  .mv-title {
+    font-size: 34px;
+    letter-spacing: .08em;
+  }
+
+  .mv-text {
+    font-size: 14px;
+    line-height: 1.8;
+  }
 }
 
 /*--------------------------------

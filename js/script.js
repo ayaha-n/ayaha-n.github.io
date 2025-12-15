@@ -1,3 +1,4 @@
+console.log("JS loaded:", new Date().toISOString());
 $(function () {
 
   //ページ内スクロール
@@ -17,4 +18,27 @@ $(function () {
     return false;
   });
 
+  // ===== scroll indicator → about =====
+  var $indicator = $(".scroll-indicator");
+  var headerH = $(".header").outerHeight() || 0;
+  var aboutTop = $("#about").offset().top - headerH;
+
+  // click → about
+  $indicator.on("click", function () {
+    $("html, body").animate(
+      { scrollTop: aboutTop },
+      500,
+      "swing"
+    );
+  });
+
+  // scroll → hide
+  $(window).on("scroll", function () {
+    if ($(this).scrollTop() > 10) {
+      $indicator.fadeOut(300);
+    } else {
+      $indicator.fadeIn(300);
+    }
+  });
 });
+
