@@ -247,31 +247,6 @@ img {
   animation: scrollLine 1.6s ease-in-out infinite;
 }
 
-@media screen and (max-width: 768px) {
-  .mv {
-    height: 72vh;          /* ちょい短めに */
-    min-height: 520px;     /* 文字が詰まるなら増やす */
-    align-items: flex-start;
-    padding-top: 310px;    /* ヘッダー分の逃げ */
-    background-position: 57%; /* 画像の位置をbackground-position: X Y;で調整*/
-  }
-
-  .mv-container {
-    padding: 0 20px;
-    text-align: left;      /* 中央にしたければ center */
-  }
-
-  .mv-title {
-    font-size: 34px;
-    letter-spacing: .08em;
-  }
-
-  .mv-text {
-    font-size: 14px;
-    line-height: 1.8;
-  }
-}
-
 /*--------------------------------
  Works
 ---------------------------------*/
@@ -362,15 +337,6 @@ img {
   line-height: 1.8;
 }
 
-@media screen and (max-width: 767px) {
-  .skill-item {
-    width: 100%;
-  }
-  .skill-list {
-    gap: 24px;
-  }
-}
-
 .skill-group-title {
   margin: 60px 0 24px;
   font-size: 14px;
@@ -405,10 +371,85 @@ img {
 .profile-body p {
   font-size: 15px;
   line-height: 1.8;
+  text-align: center;
 }
 
 .profile-body p:not(:last-child) {
   margin-bottom: 30px;
+}
+
+.profile-subtitle {
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #999;
+  margin: 18px 0 10px;
+  font-weight: 600;
+}
+
+.keyword-list {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 22px;
+  padding: 0;
+  list-style: none;
+}
+
+.keyword-list li {
+  font-size: 12px;
+  padding: 4px 10px;
+  border: 1px solid #ddd;
+  border-radius: 999px;
+  color: #555;
+  line-height: 1.4;
+  text-align:center;
+  width: max-content;
+}
+
+/* ===== PC only ===== */
+@media (min-width: 768px){
+  .keyword-list{
+    display:grid;
+    grid-template-columns: repeat(6, max-content);
+    justify-content:center;
+    gap:12px;
+  }
+ 
+  /* 1行目*/
+  .keyword-list li:nth-child(1){
+    grid-row: 1;
+    grid-column: 3;
+    justify-self: center;
+  }
+
+  .keyword-list li:nth-child(2){
+    grid-row: 1;
+    grid-column: 4;
+    justify-self: center;
+  }
+
+  .keyword-list li:nth-child(3){
+    grid-row: 1;
+    grid-column: 5;
+    justify-self: center;
+  }
+
+  /* 2行目*/
+  .keyword-list li:nth-child(4) {
+    grid-row: 2;
+    grid-column: 3 / span 1;
+    justify-self: right;
+    transform: translateX(14px); 
+  }
+
+  .keyword-list li:nth-child(5) {
+    grid-row: 2;
+    grid-column: 4 / span 2;
+    justify-self: center;
+    transform: translateX(-14px); 
+  }
 }
 
 /*--------------------------------
@@ -575,24 +616,31 @@ img {
 
   /*  メインビジュアル */
   .mv {
-    height: 75vh;
+    height: 75vh;  
+    min-height: 520px;     /* 文字が詰まるなら増やす */
+    align-items: flex-start;
+    padding-top: 310px;    /* ヘッダー分の逃げ */
+    background-position: 57%; /* 画像の位置をbackground-position: X Y;で調整*/
   }
 
   .mv-container {
     padding: 0 20px;
+    text-align: left;      /* 中央にしたければ center */
   }
 
   .mv-title {
     font-size: 30px;
-  }
-  .mv-subtitle {
-    font-size: 16px;
-    margin-bottom: 20px;
+    letter-spacing: .08em;
   }
 
   .mv-text {
     font-size: 14px;
     line-height: 1.7;
+  }
+
+  .mv-subtitle {
+    font-size: 16px;
+    margin-bottom: 20px;
   }
 
   /* Works */
@@ -615,7 +663,9 @@ img {
   }
 
   /* Skill */
+ 
   .skill-list {
+    gap: 24px;
     display: block;
     margin-bottom: 0;
   }
@@ -639,8 +689,10 @@ img {
   }
 
   /* About */
+
   .profile {
     display: block;
+    flex-direction: column;
   }
   .profile-img {
     width: 150px;
