@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <meta property='og:type' content='website'> <!--OGP（Open Graph Protocol）用の指定-->
+  <meta property='og:title' content='AYAHA NAGATA | Portfolio'>
+  <meta property="og:url" content="https://ayaha-n.github.io/">
+  <meta property='og:description' content='Ayaha Nagata – Research and works on plush character robots, HRI, and interactive experiences.'>
+  <meta property="og:image" content="img/ogp.png"> <!--サムネイル画像-->
+  <meta name="description" content="Ayaha Nagata – Research and works on plush character robots, HRI, and interactive experiences." /> <!--検索結果用の指定-->
+  <title>AYAHA NAGATA | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
+  <link href="/css/ress.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="/css/style.css" media="all" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" href="img/favicon.ico" /> <!--ブラウザタブアイコン画像-->
+  <link rel="canonical" href="https://ayaha-n.github.io/">
+</head>
+
+<body>
+  <div class="wrapper">
+    
+    <!-- header -->
+    <header class="header ">
+      <div class="container">
+        <h1 class="header-logo">
+          <a href=".">AYAHA NAGATA</a>
+        </h1>
+        <nav class="gnav">
+          <ul class="gnav-list">
+            <li class="gnav-item"><a href="./#about">ABOUT</a></li>
+	    <li class="gnav-item"><a href=".#works">WORKS</a></li>
+            <li class="gnav-item"><a href="./#skill">SKILLS</a></li>
+            <li class="gnav-item"><a href="./#contact">CONTACT</a></li>
+
+	    <!--lang switch-->
+	    <!-- <li class="gnav-item gnav-lang"> -->
+	    <!--   <a href="/" class="is-active">JP</a> -->
+	    <!--   <span class="sep">/</span> -->
+	    <!--   <a href="/en/">EN</a> -->
+
+	    </li>  
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- /header -->
+
+    <main class="content">
+
+      <article class="article">
+        <div class="article-container">
+          <h2 class="article-title">Plush Memories</h2>
+	  <p class="work-meta">2025</p>
+	  <div class="work-video">
+	    <iframe
+	      src="https://www.youtube.com/embed/HsCT6iwd7Xo"
+	      title="Plush Memories – Interactive Installation"
+	      frameborder="0"
+	      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+	      allowfullscreen>
+	    </iframe>
+	  </div>
+          <div class="article-body">
+            <p>
+	      「ぬいぐるみには記憶が宿っている」<br class="sp-only">
+	      そんな感覚を、触れることで確かめられる作品です。
+            </p>
+	    <h3>Concept</h3>
+	    <p>
+	      ぬいぐるみには記憶が宿っている、<br class="sp-only">と感じたことはありますか？<br>
+	      撫でられて癖のついた毛並み、手に馴染んだ感触。<br>
+	      それらは誰かと過ごした時間の痕跡であり、<br>触れることによって呼び起こされる<br class="sp-only">「ぬいぐるみの記憶」です。<br>
+	      あなたが触れた瞬間も、<br class="sp-only">確かな記憶として刻まれます。<br>
+	    </p>
+            <h3>Experience</h3>
+            <p>
+	      ぬいぐるみに触れると、ぬいぐるみがこれまで人と触れ合ってきた記憶が、映像として壁面に投影されます。来場者は、表示される映像を通してぬいぐるみの過去に思いを馳せたり、自身の記憶を重ね合わせたりしながら、それぞれ異なる関係性をこのぬいぐるみと結んでいきます。
+	    </p>
+            <h3>System</h3>
+            <p>
+              <img src="img/plush_memory_system.jpg" alt="System Overview of This Work">
+            </p>
+	    <p>
+	      ぬいぐるみロボットに近接覚センサを組み込み、接触を検知すると背景スクリーンに映像を投影する仕組みを実装しました。頭部への接触では撫でられている様子、手先への接触では握手をしている様子など、接触部位に応じて異なる映像が表示されます。投影される映像は、来場者の写真を撮り、AIを用いてイラスト化したものです。
+	    </p>
+            <h3>Objective / Considerations</h3>
+            <p>モノでありながらどこか有機的な印象を持つぬいぐるみに注目し、「ぬいぐるみには記憶が宿っている」という感覚を、触れる行為を通して呼び起こされる体験として表現することを目的としました。</p>
+            <p>
+	      ぬいぐるみの柔らかな質感を損なわずに、どうやって接触を検知するかが一番の課題でした。近接覚センサシートの検知面を内側に向け、綿の密度変化から接触を検知する方式を考案・実装し、補強方法や取り付け構造の検討、長時間動作試験を行いました。結果として、展示期間中安定して動作させることができました。</p>
+	    <h3>Observations</h3>
+            <p>
+	      多くの来場者の方が自らの思い出（自分の子どもが小さかった頃の話や、ペットとの記憶、昔大切にしていたぬいぐるみの話など）を語ってくれました。中には涙ぐみながら話してくれる方もおり、本作品が一方的に意味を与えるようなものではなく、来場者自身の記憶を引き出し、それぞれの体験と重ね合わせて受け取ってもらえるものとなっていました。<br>
+	      アンケートでも、多くの方が「安心感がある」「親しみやすい」と快適性を高く評価していました。
+	    </p>
+
+           </div>
+          <div class="home-link">
+            <a href="./#works">Works一覧へ</a>
+          </div>
+        </div>
+      </article>
+
+      <div class="page-top" id="js-page-top">
+        <span class="material-icons-outlined">expand_less</span>
+      </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="copyright">&copy;AYAHA NAGATA</div>
+    </footer>
+    <!-- /footer -->
+
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type='text/javascript' src="js/script.js"></script>
+</body>
+</html>
