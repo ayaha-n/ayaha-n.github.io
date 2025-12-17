@@ -610,6 +610,44 @@ img {
   text-align: center; 
 }
 
+.denden-observation-block {
+  display: flex;
+  gap: 24px;
+  margin: 24px 0 40px;
+  align-items: flex-start;
+}
+
+.denden-observation-image {
+  flex: 0 0 25%;
+}
+
+.denden-observation-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.denden-observation-text {
+  flex: 1;
+}
+
+.denden-observation-text p {
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+  .denden-observation-block {
+    flex-direction: column;
+  }
+
+  .denden-observation-image {
+    flex: none;
+  }
+}
+
+
 
 /* PC版だけ少し小さくする */
 @media (min-width: 1024px){

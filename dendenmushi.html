@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <meta property='og:type' content='website'> <!--OGP（Open Graph Protocol）用の指定-->
+  <meta property='og:title' content='AYAHA NAGATA | Portfolio'>
+  <meta property="og:url" content="https://ayaha-n.github.io/">
+  <meta property='og:description' content='Ayaha Nagata – Research and works on plush character robots, HRI, and interactive experiences.'>
+  <meta property="og:image" content="img/ogp.png"> <!--サムネイル画像-->
+  <meta name="description" content="Ayaha Nagata – Research and works on plush character robots, HRI, and interactive experiences." /> <!--検索結果用の指定-->
+  <title>AYAHA NAGATA | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
+  <link href="/css/ress.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="/css/style.css" media="all" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" href="img/favicon.ico" /> <!--ブラウザタブアイコン画像-->
+  <link rel="canonical" href="https://ayaha-n.github.io/">
+</head>
+
+<body>
+  <div class="wrapper">
+    
+    <!-- header -->
+    <header class="header ">
+      <div class="container">
+        <h1 class="header-logo">
+          <a href=".">AYAHA NAGATA</a>
+        </h1>
+        <nav class="gnav">
+          <ul class="gnav-list">
+            <li class="gnav-item"><a href="./#about">ABOUT</a></li>
+	    <li class="gnav-item"><a href=".#works">WORKS</a></li>
+            <li class="gnav-item"><a href="./#skill">SKILLS</a></li>
+            <li class="gnav-item"><a href="./#contact">CONTACT</a></li>
+
+	    <!--lang switch-->
+	    <!-- <li class="gnav-item gnav-lang"> -->
+	    <!--   <a href="/" class="is-active">JP</a> -->
+	    <!--   <span class="sep">/</span> -->
+	    <!--   <a href="/en/">EN</a> -->
+
+	    </li>  
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- /header -->
+
+    <main class="content">
+
+      <article class="article">
+        <div class="article-container">
+          <h2 class="article-title">Denden-mushi</h2>
+	  <p class="work-meta">2024. 1</p>
+	  <div class="work-video">
+	    <iframe
+	      src="https://www.youtube.com/embed/YuwkB4PEHuQ"
+	      title="Denden-mushi"
+	      frameborder="0"
+	      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+	      allowfullscreen>
+	    </iframe>
+	  </div>
+
+	  <div class="article-body">
+            <p>
+	      話者の感情を音声の抑揚から分析し、対応する表情を目の液晶・頬のLEDで表出する小型ぬいぐるみロボットです。
+	    </p>
+	    
+            <h3>Objective</h3>
+	    <p>
+	      音声通話の手軽さと、相手の感情が伝わる視覚的な分かりやすさを併せ持つ、新しいコミュニケーションの形を模索することを目的として、ぬいぐるみ型のコミュニケーションロボット「電伝虫」を制作しました。音声から感情を分析し、その結果をロボットの表情として提示することで、声だけでは伝わりにくい感情を補完する仕組みを提案しています。
+	    </p>
+            <h3>System</h3>
+	    <p>
+	      マイクで音声を取得し、hume AIのAPIを用いて音声の抑揚から感情分析を行います。rosserial通信を用いて目のモニタや頬のLEDに指令を送り、表情表出を行います。表情は6種に分類しました。
+	    </p>
+	    <p class="system-note">
+	      &#8251;目のモニタは研究室の先輩が開発したプラットフォームを使用し、調整は自身で行いました。
+	    </p>
+	    <p>
+              <img src="img/denden-system.jpg" alt="System overview of dendenmushi">
+            </p>
+            <h3>Considerations</h3>
+	    <p>
+	      電伝虫は、コミュニケーションロボットとして重要な見た目の親しみやすさに加え、抱き上げたり撫でたりといった扱いに耐えられる耐久性、マイクやスピーカ周辺での通気性を同時に満たす必要がありました。そのため、外装全体には柔らかさと耐久性のバランスが取れたキルティング生地を採用し、マイク・スピーカ周辺には通気性を重視して目の粗いチュール素材を用いました。試作段階ではそれぞれフェルトや排水溝ネットなども検討しましたが、毛羽立ちや破れやすさといった点から、本制作では使用を見送りました。
+	    </p>
+	    <h3>Exhibition</h3>
+            <ul>
+	      <li>May 18-19, 2024 —The University of Tokyo May Festival</li>
+	    </ul>
+
+
+	    <h3>Observations</h3>
+	    <div class="denden-observation-block">
+	      <div class="denden-observation-image">
+		<img src="img/denden-exhibition.jpg"
+		     alt="Denden-mushi during the exhibition">
+	      </div>
+	      <div class="denden-observation-text">
+		<p>
+		  展示では、未就学児を中心とした幼い子どもたちから特に高い関心を集めました。ぬいぐるみらしい柔らかな外観に惹かれ、自ら近づいて興味を示す様子が多く見られました。子どもたちは電伝虫を抱き上げたり、頬ずりをしたり、つねったりするなど、他の硬い外装を持つロボットではあまり見られない、親しみのある触れ方をしていました。
+		</p>
+	      </div>
+	    </div>
+          <div class="home-link">
+            <a href="./#works">Works一覧へ</a>
+          </div>
+        </div>
+      </article>
+
+      <div class="page-top" id="js-page-top">
+        <span class="material-icons-outlined">expand_less</span>
+      </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="copyright">&copy;AYAHA NAGATA</div>
+    </footer>
+    <!-- /footer -->
+
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type='text/javascript' src="js/script.js"></script>
+</body>
+</html>
