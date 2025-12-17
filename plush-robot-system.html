@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <meta property='og:type' content='website'> <!--OGP（Open Graph Protocol）用の指定-->
+  <meta property='og:title' content='AYAHA NAGATA | Portfolio'>
+  <meta property="og:url" content="https://ayaha-n.github.io/">
+  <meta property='og:description' content='Ayaha Nagata – Research and works on plush character robots, HRI, and interactive experiences.'>
+  <meta property="og:image" content="img/ogp.png"> <!--サムネイル画像-->
+  <meta name="description" content="Ayaha Nagata – Research and works on plush character robots, HRI, and interactive experiences." /> <!--検索結果用の指定-->
+  <title>AYAHA NAGATA | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
+  <link href="/css/ress.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="/css/style.css" media="all" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" href="img/favicon.ico" /> <!--ブラウザタブアイコン画像-->
+  <link rel="canonical" href="https://ayaha-n.github.io/">
+</head>
+
+<body>
+  <div class="wrapper">
+    
+    <!-- header -->
+    <header class="header ">
+      <div class="container">
+        <h1 class="header-logo">
+          <a href=".">AYAHA NAGATA</a>
+        </h1>
+        <nav class="gnav">
+          <ul class="gnav-list">
+            <li class="gnav-item"><a href="./#about">ABOUT</a></li>
+	    <li class="gnav-item"><a href=".#works">WORKS</a></li>
+            <li class="gnav-item"><a href="./#skill">SKILLS</a></li>
+            <li class="gnav-item"><a href="./#contact">CONTACT</a></li>
+
+	    <!--lang switch-->
+	    <!-- <li class="gnav-item gnav-lang"> -->
+	    <!--   <a href="/" class="is-active">JP</a> -->
+	    <!--   <span class="sep">/</span> -->
+	    <!--   <a href="/en/">EN</a> -->
+
+	    </li>  
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- /header -->
+
+    <main class="content">
+
+      <article class="article">
+        <div class="article-container">
+          <h2 class="article-title">Stuffed Robot Platform for Interactive Experiences</h2>
+	  <p class="work-meta">since 2024</p>
+	  <figure class="theater-thumb">
+            <img src="img/hardware-overview.jpg"
+		   alt="">
+          </figure>
+	  <div class="article-body">
+            <p>
+	      眉・鼻・首・腕の動作、音声発話、接触検知が可能なぬいぐるみロボットです。
+	    </p>
+	    
+            
+            <h3>Hardware Design</h3>
+	    
+	    <p>
+	      本ロボットは、組み換え可能なKONDO KXRシリーズのロボットをベースに、市販のぬいぐるみの形状やサイズに合わせて内部構成を設計しています。ぬいぐるみ外装を先に決定し、それに合わせて使用するモータの配置を検討し、外装固定用および可動部拡張用のパーツを設計・追加しました。
+
+	    </p>
+	    
+	    <h4>Expressive Eyebrow Mechanism</h4>
+	    <p>
+	      ぬいぐるみらしい表情表出ができるよう、表皮の凹凸を利用した眉での表現を考案しました。機構を外部に露出させるのではなく、表皮を内側から押し出す仕組みとしています。
+	    </p>
+	    <p>
+              <img src="img/eyebrow.png" alt="Eyebrow mechanism">
+            </p>
+
+	    <h4>Internal Cotton-Bag Structure</h4>
+	    <p>
+	      やわらかい触り心地を保ちつつ再現性のある構造になるよう、綿袋を設計しました。ぬいぐるみの3Dスキャンデータと、内部機構の3DCADデータの差分を取ることで、綿袋の形状を決定しています。
+	    </p>
+	    <p>
+              <img src="img/cottonbag.jpg" alt="How to design cotton-bag">
+            </p>
+
+	    <h3>Applications</h3>
+	    <p>
+	      本プラットフォームは、以下のインタラクティブ作品において
+	      実際に使用されています。
+	    </p>
+
+	    <ul class="application-list">
+	      <li>
+		<a href="work-exhibition.html">
+		  Plush Memories
+		</a>
+		<span class="application-note">— Exhibition</span>
+	      </li>
+	      <li>
+		<a href="work-theater.html">
+		  Interactive Scripted Performance with a Stuffed Robot
+		</a>
+		<span class="application-note">— Event</span>
+	      </li>
+	    </ul>
+
+
+            <div class="home-link">
+            <a href="./#works">Works一覧へ</a>
+          </div>
+        </div>
+      </article>
+
+      <div class="page-top" id="js-page-top">
+        <span class="material-icons-outlined">expand_less</span>
+      </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="copyright">&copy;AYAHA NAGATA</div>
+    </footer>
+    <!-- /footer -->
+
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type='text/javascript' src="js/script.js"></script>
+</body>
+</html>

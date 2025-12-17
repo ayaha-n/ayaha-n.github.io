@@ -647,6 +647,30 @@ img {
   }
 }
 
+.article-body h4 {
+    margin-top: 42px;
+    margin-bottom: 12px;
+}
+
+.application-list {
+  margin: 16px 0 32px;
+  padding-left: 1.2em;
+}
+
+.application-list li {
+  margin-bottom: 12px;
+}
+
+.application-list a {
+  color: #333;
+  text-decoration: underline;
+}
+
+.application-note {
+  font-size: 13px;
+  color: #777;
+  margin-left: 6px;
+}
 
 
 /* PC版だけ少し小さくする */
