@@ -672,6 +672,12 @@ img {
   margin-left: 6px;
 }
 
+.works-note {
+  margin-top: 48px;
+  font-size: 14px;
+  color: #555;
+}
+
 
 /* PC版だけ少し小さくする */
 @media (min-width: 1024px){
