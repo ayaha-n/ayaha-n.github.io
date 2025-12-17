@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <meta property='og:type' content='website'> <!--OGP（Open Graph Protocol）用の指定-->
+  <meta property='og:title' content='AYAHA NAGATA | Portfolio'>
+  <meta property="og:url" content="https://ayaha-n.github.io/">
+  <meta property='og:description' content='Ayaha Nagata – Research and works on plush character robots, HRI, and interactive experiences.'>
+  <meta property="og:image" content="img/ogp.png"> <!--サムネイル画像-->
+  <meta name="description" content="Ayaha Nagata – Research and works on plush character robots, HRI, and interactive experiences." /> <!--検索結果用の指定-->
+  <title>AYAHA NAGATA | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
+  <link href="/css/ress.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="/css/style.css" media="all" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" href="img/favicon.ico" /> <!--ブラウザタブアイコン画像-->
+  <link rel="canonical" href="https://ayaha-n.github.io/">
+</head>
+
+<body>
+  <div class="wrapper">
+    
+    <!-- header -->
+    <header class="header ">
+      <div class="container">
+        <h1 class="header-logo">
+          <a href=".">AYAHA NAGATA</a>
+        </h1>
+        <nav class="gnav">
+          <ul class="gnav-list">
+            <li class="gnav-item"><a href="./#about">ABOUT</a></li>
+	    <li class="gnav-item"><a href=".#works">WORKS</a></li>
+            <li class="gnav-item"><a href="./#skill">SKILLS</a></li>
+            <li class="gnav-item"><a href="./#contact">CONTACT</a></li>
+
+	    <!--lang switch-->
+	    <!-- <li class="gnav-item gnav-lang"> -->
+	    <!--   <a href="/" class="is-active">JP</a> -->
+	    <!--   <span class="sep">/</span> -->
+	    <!--   <a href="/en/">EN</a> -->
+
+	    </li>  
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- /header -->
+
+    <main class="content">
+
+      <article class="article">
+        <div class="article-container">
+          <h2 class="article-title">Interactive Scripted Performance with a Stuffed Robot</h2>
+	  <p class="work-meta">2024. 12</p>
+	  <figure class="theater-thumb">
+            <img src="img/theater-thumb.jpg" alt="">
+          </figure>
+	  <div class="article-body">
+            <p>
+	      子どもたちがぬいぐるみロボットと一緒に物語を演じる、参加型の朗読劇イベントです。<br>
+	      放課後児童施設にて実施しました。
+	    </p>
+            <h3>Experience</h3>
+            <p>
+	      劇は、参加者とぬいぐるみロボットが交互に台本のセリフを読み上げる形式で進行します。全体の流れを下図に示します。
+	    </p>
+	    <figure class="theater-experience-figure">
+	      <img src="img/theater_eventflow.jpg" alt="Event flow of the interactive scripted performance">
+	    </figure>
+            <h3>System</h3>
+            <p>
+              <img src="img/theater-system.jpg" alt="Software system overview of the scripted performance">
+            </p>
+	    <p>
+	      ROSを用い、劇の進行状態と動作指示に応じて、ロボットが台本のセリフを読み上げ、眉毛による表情表出や首・腕の動作を行うシステムを実装しました。劇の進行はGUIから操作でき、セリフや動作に対応したボタンを押すことで、シーンに応じたロボットの振る舞いを制御できます。
+	    </p>
+	    <p class="system-note">
+	      &#8251;制御用GUIは研究室の先輩が開発したベースを使用し、機能追加や調整は自身で行いました。
+	    </p>
+            <h3>Objective / Considerations</h3>
+	    <p>
+	      本イベントでは、子どもたちがぬいぐるみロボットと物語をともに演じる体験を通して、ロボットを登場人物や対話相手として自然に受け取れる場をつくることを目的としました。
+	    </p>
+
+	    <p>
+	      対象が子どもであることから、参加者の反応や行動には大きな幅があり、事前に想定した進行通りに進まない可能性がありました。そのため、研究室のメンバーに協力してもらいながら事前にリハーサルを行い、台本構成やイベントの流れを検討しました。
+	    </p>
+
+	    <p>
+	      また、学外施設で実施するにあたり、施設側との事前調整を重ね、子どもたちが安心して参加できる環境づくりを心がけました。
+	    </p>
+
+	    <h3>Observations</h3>	    
+	    <p>
+	      イベントでは、参加者がロボットの頭や腕を撫でる行動が多く見られました。また劇体験後に参加者がロボットに宛てて書いた手紙（下図）からは、ロボットに対する好意的な感情や、再会への期待が込められていました。
+	    </p>
+            <p>
+              <img src="img/theater-letter.jpg" alt="Letters written by participants to the robot after the performance">
+            </p>
+
+
+	    <p>
+	      アンケートや行動観察により評価を行った結果、以下のことが示唆されました。
+	    </p>
+	    <ul>
+	      <li>参加者のロボットやイベントに対する肯定的な感情</li>
+	      <li>事前の認知度や好感度が高いほど物語への没入感が高い傾向</li>
+	      <li>実験環境が評価に影響を及ぼす可能性</li>
+	      <li>参加者の主体的な関与の重要性</li>
+	    </ul>
+	    
+           </div>
+          <div class="home-link">
+            <a href="./#works">Works一覧へ</a>
+          </div>
+        </div>
+      </article>
+
+      <div class="page-top" id="js-page-top">
+        <span class="material-icons-outlined">expand_less</span>
+      </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="copyright">&copy;AYAHA NAGATA</div>
+    </footer>
+    <!-- /footer -->
+
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type='text/javascript' src="js/script.js"></script>
+</body>
+</html>

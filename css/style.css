@@ -552,8 +552,20 @@ img {
   text-align: center;
 }
 
-/* System セクション内の図だけを制御 */
-.article-body h3 + p img {
+
+.article-body ul {
+  line-height: 1.8;   /* 行間をゆったり */
+  padding-left: 1.2em;
+}
+
+.theater-experience-figure img {
+  max-width: 490px;
+  width: 100%;
+  margin: 24px auto;
+  display: block;
+}
+
+.plush-memory-system-figure img {
   display: block;
   max-width: 450px;   /* ← PCでの最大サイズ（600〜800pxで調整） */
   width: 100%;
@@ -561,6 +573,18 @@ img {
   margin: 24px auto;  /* 中央寄せ */
 }
 
+.theater-thumb img {
+  display: block;
+  max-width: 550px;   /* ← PCでの最大サイズ（600〜800pxで調整） */
+  width: 100%;
+  height: auto;
+  margin: 24px auto;  /* 中央寄せ */
+}
+.system-note {
+  font-size: 13px;
+  color: #666;
+  margin-top: 8px;
+}
 
 .work-video {
   position: relative;
